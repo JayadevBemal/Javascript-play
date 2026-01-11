@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myntra Bag</title>
+  <link rel="stylesheet" href="myntra-bag.css">
+</head>
+<body>
+  <main>
+    <div class="container">
+    <button class="a" onclick="alert('clicked successfully')">Click</button>
+    <button class="b" id="bag" onclick="cartquantity = cartquantity + 1;document.querySelector('#cartsummary').innerHTML = `Your Bag Has ${cartquantity} items.`;">Add to Bag</button>
+    <button class="c" id="list" onclick="cartquantity = cartquantity - 1;document.querySelector('#cartsummary').innerHTML = `Your Bag Has ${cartquantity} items.`; ">Move to Wishlist</button>
+    <button class="b" onclick=" cartquantity = cartquantity + 2;document.querySelector('#cartsummary').innerHTML = `Your Bag Has ${cartquantity} items.`;">Add 1+1 Sale Item</button>
+    <hr>
+    <h1 id="cartsummary"></h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit non sed rem minima et tempore aliquam est corrupti voluptatem sequi, facilis eum praesentium omnis id illum veritatis perspiciatis expedita nulla! Eos, illo repellat blanditiis facere possimus dolorem exercitationem assumenda beatae voluptatum ducimus est inventore culpa accusantium voluptatibus itaque magnam deleniti?</p>
+  </main>
+
+<script>
+  let cartquantity = 0;
+  document.querySelector('#cartsummary').innerHTML = `Your Bag Has ${cartquantity} items.`;
+  document.querySelector('#bag')
+
+  document.querySelector('list')
+</script>
+</body>
+</html>
