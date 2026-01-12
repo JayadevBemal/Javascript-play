@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Document</title>
+  <title>Objects</title>
 </head>
 <body>
   
@@ -11,9 +11,10 @@
 
 let product = {
    company : 'JKB' ,
-   price : 3499 ,
+   price : 39999 ,
    item_name: "jeans",
     'country-of-origin': 'India',
+    displayPrice: function(){console.log(`The price of the product is ₹${this.price}`)}
 }
 console.log(product)
 console.log(product.company)
@@ -25,9 +26,40 @@ product.company = 'Eile'
 console.log(product.company)
 console.log(product['country-of-origin'])
 
+  //destructuring
+
+let companion = product.company;
+console.log(companion)
+let {company} = product;
+let {item_name} = product;
+console.log(company,item_name);
+  //deletion
 delete product.company;
 console.log(product)
-    
+console.log(product.displayPrice())
+
+//reference in object
+
+let a = 8;
+let b = a;
+console.log(`a=${a} and b=${b}`)
+a = 10;
+console.log(`a=${a } and b=${b}`)
+
+let x = { num : 10}
+let y = x;
+console.log(`x=${x.num} and y=${y.num}`)
+
+x.num = 25;
+console.log(`x=${x.num} and y=${y.num}`)
+  
+//     object name is just the reference i.e it doesn't contain the actual address where the data is stored.     //       //
+
+let r = {ronin:'tvs'}
+let s = {ronin:'tvs'}
+console.log(r===s)
+
+
   </script>
 </body>
 </html>
