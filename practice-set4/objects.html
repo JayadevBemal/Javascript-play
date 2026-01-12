@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+  <script>
+
+let product = {
+   company : 'JKB' ,
+   price : 3499 ,
+   item_name: "jeans",
+    'country-of-origin': 'India',
+}
+console.log(product)
+console.log(product.company)
+console.log(product.item_name)
+console.log(product.price)
+
+
+product.company = 'Eile'
+console.log(product.company)
+console.log(product['country-of-origin'])
+
+delete product.company;
+console.log(product)
+    
+  </script>
+</body>
+</html>
