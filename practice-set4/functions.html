@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+  <script>
+    let age = 23;
+    function printAge(){console.log(`Your age is ${age}.`)}
+
+    printAge();
+    age = 50;
+    printAge();
+    age = 299;
+    printAge();
+function randomMove(){
+let random = Math.random()* 3;
+return random;
+}
+    
+    console.log(randomMove())
+
+    let agee = 3;
+    let status;
+
+   function drive(){ if(agee >= 65){
+      return 'you can not drive'
+    }
+    else if (agee >= 18) {
+      return 'you can drive'
+    }
+    else{
+       return 'you need a bicycle'
+    }
+    
+  }
+  console.log(drive())
+
+  function sum(a,b) {
+     let sum = a + b;
+     return sum ;
+  }
+  let num = sum(100,30)
+  console.log(num)
+
+  function greet(name = 'Gentle Soul'){
+    console.log(`Welcome ${name}`)
+    return;
+  }
+greet('Jayadev')
+greet()
+  </script>
+</body>
+</html>
