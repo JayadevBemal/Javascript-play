@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+  <script>
+    let age = Math.random() * 101;
+    let gender = Math.random()*2;
+    let discount;
+  
+    if (age < 5){
+      discount = `100 % off`;
+    }
+   else if (age < 8){
+     discount = `50 % off`;
+    }
+    else if (age > 65){
+      discount = `30 % off`;
+    }
+  
+    //gender
+
+    if (gender > 0 && gender < 1){
+      discount = `no discount`;
+    }
+    else if (gender >1 && gender < 2){
+      discount = `30 % off`;
+    }
+
+  </script>
+</body>
+</html>
