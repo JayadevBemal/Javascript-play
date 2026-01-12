@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+  body{text-align: center;background-color: aqua;}
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bat Ball and Stump Game</h1>
+    <div class="btn">
+      <button class="a" id="one" onclick=" document.querySelector('.text').innerHTML = 'bat';userchoice = 'bat';console.log(`user choice is bat.`);
+   randomnumber = Math.random() * 3;
+   if (randomnumber <= 1)
+   {
+    computerchoice = 'bat'
+    document.querySelector('.text').innerHTML = 'Its a tie';
+    console.log(`Computer choice is bat. `)
+   }
+   else if(randomnumber <= 2)
+   {
+    computerchoice = 'ball';console.log(`Computer choice is ball.`);
+    document.querySelector('.text').innerHTML = 'User Won';
+   }
+   else
+   {
+   computerchoice = 'stump';console.log(`Computer choice is stump.`);
+   document.querySelector('.text').innerHTML = 'User Lost';
+   };
+   alert(`user choice is bat and computer choice is ${computerchoice}.`)
+   
+      
+      ";>Bat</button>
+
+
+
+      <button class="a" id="two" onclick="document.querySelector('.text').innerHTML = 'ball';userchoice = 'ball';console.log(`User choice is ball.`)
+      
+       randomnumber = Math.random() * 3;
+   if (randomnumber <= 1)
+   {
+    computerchoice = 'bat'
+    document.querySelector('.text').innerHTML = 'User Lost';
+    console.log(`Computer choice is bat.`)
+   }
+   else if(randomnumber <= 2)
+   {
+    computerchoice = 'ball'
+    document.querySelector('.text').innerHTML = 'Its a tie';
+    console.log(`Computer choice is ball.`)
+   }
+   else
+   {
+   computerchoice = 'stump'
+   document.querySelector('.text').innerHTML = 'User Won';
+   console.log(`Computer choice is stump.`)
+   };
+   alert(`user choice is ball and computer choice is ${computerchoice}.`)
+      
+      " >Ball</button>
+
+
+
+      <button class="a" id="three" onclick="document.querySelector('.text').innerHTML = 'stump';userchoice = 'stump';
+      console.log(`User choice is stump.`);
+      
+ randomnumber = Math.random() * 3;
+   if (randomnumber <= 1)
+   {
+    computerchoice = 'bat'
+    document.querySelector('.text').innerHTML = 'User Won';
+    console.log(`Computer choice is bat.`)
+   }
+   else if(randomnumber <= 2)
+   {
+    computerchoice = 'ball'
+    document.querySelector('.text').innerHTML = 'User Lost';
+    console.log(`Computer choice is ball.`)
+   }
+   else
+   {
+   computerchoice = 'stump'
+   document.querySelector('.text').innerHTML = 'Its a tie';
+   console.log(`Computer choice is stump.`)
+   }
+alert(`user choice is stump and computer choice is ${computerchoice}.`)
+      ">Stump</button>
+
+    </div>
+  </div>
+<div class="text">
+
+</div>
+  <script>
+   let userchoice;
+   let randomnumber;
+  </script>
+</body>
+</html>
