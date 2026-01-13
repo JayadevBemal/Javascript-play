@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+  body{text-align: center;background-color: aqua;}
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bat Ball and Stump Game</h1>
+    <div class="btn">
+      <button class="a" id="one" onclick="userchoice ='bat';computerchoice = choice() ;
+      
+       resultMsg = getResult('bat',computerchoice)
+
+       finalResult(userchoice,computerchoice,resultMsg)
+      ";>Bat</button>
+
+
+      <button class="a" id="two" onclick="userchoice = 'ball';computerchoice = choice();
+
+       resultMsg = getResult('ball',computerchoice)
+ 
+      finalResult(userchoice,computerchoice,resultMsg)
+      
+      " >Ball</button>
+
+
+      <button class="a" id="three" onclick="userchoice = 'stump';
+      computerchoice = choice();
+
+    resultMsg = getResult('stump',computerchoice) 
+      
+    finalResult(userchoice,computerchoice,resultMsg)
+      
+      ">Stump</button>
+        <button class="a" onclick="localStorage.clear();resetScore()">
+          Reset 
+        </button>
+    </div>
+  </div>
+<div class="text">
+
+</div>
+  <script>
+  
+ let scoreboard = {
+    Win:0,
+    lose:0,
+    tie:0,
+  }
+
+   let scoreStr = localStorage.getItem('scoreboard')
+
+
+   //  if(scoreStr !== undefined){
+   //        scoreboard = JSON.parse(scoreStr)
+   //  }  else {
+   //   scoreboard = {
+   //         Win:0,
+   //         lose:0,
+   //         tie:0,
+   //   }
+   //  }
+   function resetScore() {
+    
+    scoreboard =  {
+          Win:0,
+          lose:0,
+          tie:0,
+     }
+
+ 
+
+  scoreboard.displayScore = function(){
+      return `won:${scoreboard.Win}  lost:${scoreboard.lose}  tied:${scoreboard.tie}`
+    };
+   }
+     scoreboard = scoreStr !== null ? JSON.parse(scoreStr) :  {
+          Win:0,
+          lose:0,
+          tie:0,
+     }
+  
+ 
+
+  scoreboard.displayScore = function(){
+      return `won:${scoreboard.Win}  lost:${scoreboard.lose}  tied:${scoreboard.tie}`
+    };
+
+   let userchoice;
+   let randomnumber;
+   let resultMsg;
+   function choice(){
+      randomnumber = Math.random() * 3;
+   if (randomnumber <= 1)
+   {
+    return 'bat'
+    console.log(`Computer choice is bat. `)
+   }
+   else if(randomnumber <= 2)
+   {
+    return 'ball';console.log(`Computer choice is ball.`);
+   }
+   else
+   {
+   return 'stump';console.log(`Computer choice is stump.`);
+   };
+
+   }
+
+   function getResult(userchoice,computerchoice){
+    if (userchoice === 'bat'){
+       if(computerchoice === 'bat'){
+
+        scoreboard.tie += 1;
+        return 'Its a tie' ;
+       }
+       else if(computerchoice === 'ball'){
+        scoreboard.Win += 1;
+        return 'You Won'
+       }
+       else{
+        scoreboard.lose += 1;
+        return 'You Lost'
+       }
+    }
+    else if(userchoice === 'ball') {
+       if(computerchoice === 'bat'){
+        scoreboard.lose += 1 ;
+        return 'You Lost'
+       }
+       else if(computerchoice === 'ball'){
+        scoreboard.tie += 1;
+        return 'Its a tie' 
+       }
+       else {
+        scoreboard.Win +=1 ;
+        return 'You Won' 
+       }
+    }
+    else {
+      if(computerchoice ==='bat'){
+        scoreboard.Win += 1;
+        return 'You Won'
+      }
+      else if(computerchoice === 'ball'){
+        scoreboard.lose += 1;
+        return 'You Lost'
+      }
+      else{
+        scoreboard.tie += 1;
+        return 'Its a tie' 
+      }
+    }
+  }
+  
+   function finalResult(userchoice,computerchoice,resultMsg){
+
+    localStorage.setItem('scoreboard',JSON.stringify(scoreboard))
+    alert(`
+    user choice is ${userchoice}
+    computer choice is ${computerchoice}
+    ${resultMsg}.
+    ${scoreboard.displayScore()}
+   `)
+   }
+                    
+  </script>
+</body>
+</html>
