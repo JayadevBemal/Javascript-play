@@ -117,43 +117,43 @@
     if (userchoice === 'bat'){
        if(computerchoice === 'bat'){
 
-        scoreboard.tie += 1;
+        scoreboard.tie ++;
         return 'Its a tie' ;
        }
        else if(computerchoice === 'ball'){
-        scoreboard.Win += 1;
+        scoreboard.Win ++;
         return 'You Won'
        }
        else{
-        scoreboard.lose += 1;
+        scoreboard.lose ++;
         return 'You Lost'
        }
     }
     else if(userchoice === 'ball') {
        if(computerchoice === 'bat'){
-        scoreboard.lose += 1 ;
+        scoreboard.lose ++ ;
         return 'You Lost'
        }
        else if(computerchoice === 'ball'){
-        scoreboard.tie += 1;
+        scoreboard.tie ++ ;
         return 'Its a tie' 
        }
        else {
-        scoreboard.Win +=1 ;
+        scoreboard.Win ++;
         return 'You Won' 
        }
     }
     else {
       if(computerchoice ==='bat'){
-        scoreboard.Win += 1;
+        scoreboard.Win ++;
         return 'You Won'
       }
       else if(computerchoice === 'ball'){
-        scoreboard.lose += 1;
+        scoreboard.lose ++ ;
         return 'You Lost'
       }
       else{
-        scoreboard.tie += 1;
+        scoreboard.tie ++ ;
         return 'Its a tie' 
       }
     }
