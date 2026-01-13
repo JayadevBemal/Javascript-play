@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Json</title>
+</head>
+<body>
+  
+
+
+  <script>
+
+
+let product = {
+  name : 'polo tshirt',
+  price : 2499 ,
+  rating : {
+    stars : 4.5,
+    noofreviews : 1250 ,
+  }
+}
+console.log(typeof product)
+console.log( product)
+
+let str = JSON.stringify(product);
+console.log(typeof str)
+console.log(str)
+
+let obj = JSON.parse(str)
+console.log(typeof obj)
+console.log(obj)
+
+
+//storing data in local storage using JSON
+
+localStorage.setItem('Name','Pintu');
+console.log(localStorage.getItem('Name'))
+
+
+localStorage.setItem('product',JSON.stringify(product))
+console.log(localStorage.getItem('product'))
+
+ 
+
+  </script>
+</body>
+</html>
