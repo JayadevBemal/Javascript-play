@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    
+//     myntra product 
+
+let product = {
+  name: 'Stripped T-shirt',
+  fit: 'slim fit',
+  color: 'blue',
+  deliveryTime: '7 days'
+}
+let product2 = {
+   name: 'Stripped T-shirt',
+  fit: 'slim fit',
+  color: 'blue',
+  deliveryTime: '2 days'
+}
+ 
+//        two references and log changing
+        let one = {
+                name: 'Jayadev',
+                age: 23
+                    }
+                    let two = one;
+
+              console.log(`name = ${one.name} and age = ${one.age}`);
+              console.log(`name = ${two.name} and age = ${two.age}`);
+
+              one.age = 25;
+              console.log(`name = ${two.name} and age = ${two.age}`);
+               console.log(`name = ${two.name} and age = ${two.age}`);
+
+               two.name = 'Bemal';
+
+               console.log(`name = ${two.name} and age = ${two.age}`);
+               console.log(`name = ${two.name} and age = ${two.age}`);
+
+
+               //     bracket notation usage
+
+               let del = product['deliveryTime'];
+               console.log(del);
+               console.log(product['deliveryTime'])
+
+               //  destructuring
+               
+               let obj = {
+                message: 'Good Job',
+                status: 'Complete'
+               }
+
+               let {message,status} = obj;
+               console.log(`the message is ${message}`)
+               console.log(`the status is ${status}`)
+
+               
+               // adding a function to compare two product objects.
+
+               function isIdentical(product1,product2) {
+                 
+              if(typeof product1 !== 'object' || typeof product2 !== 'object') {
+                   return 'thats not an object'
+                 }
+                   
+                  else if(product1 == product2){
+                  
+                    return true;
+
+                  }
+                  else if(product1.name === product2.name && product1.fit === product2.fit && product1.color === product2.color) {
+                    return  true;
+                  }
+                  else{
+                    return false;
+                  }
+
+
+               }
+              console.log(isIdentical(product,product2))
+
+
+ let product3 = {
+  name:'Shirt',
+  color:'red',
+  fit:'large'
+
+ }
+
+console.log(isIdentical(product,))
+console.log(isIdentical(product,product2))
+console.log(isIdentical(product2,product3))
+
+
+
+               </script>
+               </body>
+</html>
