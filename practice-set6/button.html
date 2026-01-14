@@ -20,9 +20,9 @@
   
 <div class="container">
   <button id="btn" onclick=" 
- increase(); isOdd()
+ pressButton()
   ">button</button>
-  <button id="reset" onclick="restart();isOdd()
+  <button id="reset" onclick="restartButton()
   ">Restart</button>
 </div>
   <script>
@@ -67,7 +67,13 @@
       document.getElementById('btn').style.backgroundColor = 'red';
     }
    }
-
+;
+   function pressButton() {
+    increase(); isOdd()
+   }
+function restartButton(){
+  restart();isOdd()
+}
   </script>
 </body>
 </html>
