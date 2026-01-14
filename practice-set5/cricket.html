@@ -7,6 +7,9 @@
 
 <style>
   body{text-align: center;background-color: aqua;}
+  .a{height: 100px;width: 100px;background-color: rgb(34, 239, 157);border: none;border-radius: 100px;cursor: pointer;}
+  .a img {height:75px ;}
+
 </style>
 </head>
 <body>
@@ -18,7 +21,7 @@
        resultMsg = getResult('bat',computerchoice)
 
        finalResult(userchoice,computerchoice,resultMsg)
-      ";>Bat</button>
+      ";><img src="bat.png" alt=""></button>
 
 
       <button class="a" id="two" onclick="userchoice = 'ball';computerchoice = choice();
@@ -27,7 +30,7 @@
  
       finalResult(userchoice,computerchoice,resultMsg)
       
-      " >Ball</button>
+      " ><img src="ball.png" alt=""></button>
 
 
       <button class="a" id="three" onclick="userchoice = 'stump';
@@ -37,14 +40,17 @@
       
     finalResult(userchoice,computerchoice,resultMsg)
       
-      ">Stump</button>
-        <button class="a" onclick="localStorage.clear();resetScore()">
-          Reset 
-        </button>
+      "><img src="stump.png" alt=""></button>
     </div>
   </div>
-<div class="text">
-
+  <div id="text">
+    <h1 id="userchoice"></h1>
+    <h1 id="compchoice"></h1>
+    <h1 id="result"></h1>
+    <h1 id="score"></h1>
+    <button class="a" onclick="localStorage.clear();resetScore(); finalResult() ">
+      Reset 
+    </button>
 </div>
   <script>
   
@@ -162,12 +168,24 @@
    function finalResult(userchoice,computerchoice,resultMsg){
 
     localStorage.setItem('scoreboard',JSON.stringify(scoreboard))
-    alert(`
-    user choice is ${userchoice}
-    computer choice is ${computerchoice}
-    ${resultMsg}.
-    ${scoreboard.displayScore()}
-   `)
+  //   alert(`
+  //   user choice is ${userchoice}
+  //   computer choice is ${computerchoice}
+  //   ${resultMsg}.
+  //   ${scoreboard.displayScore()}
+  //  `);
+
+   document.querySelector('#userchoice').innerHTML = userchoice ? `Your Choice : ${userchoice}` : '';
+   document.querySelector('#compchoice').innerHTML = computerchoice ? `computer's choice : ${computerchoice}` : '';
+   document.querySelector('#result').innerHTML = resultMsg || '';
+   document.querySelector('#score').innerHTML = scoreboard.displayScore();
+
+
+
+
+
+
+
    }
                     
   </script>
