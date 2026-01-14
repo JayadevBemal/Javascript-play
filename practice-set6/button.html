@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Document</title>
+  <style>
+    body{
+      background-color: rgb(17, 183, 83);
+      
+    }
+    .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+  </style>
+</head>
+<body>
+  
+<div class="container">
+  <button id="btn" onclick=" 
+ increase(); isOdd()
+  ">button</button>
+  <button id="reset" onclick="restart();isOdd()
+  ">Restart</button>
+</div>
+  <script>
+
+
+    let obj = { click: 0}
+    
+     
+      
+    function increase(){
+    let fetch = localStorage.getItem('click')
+     obj = fetch !== null ? JSON.parse(fetch) :  { click: 0}
+     obj.click++
+      objStr = JSON.stringify(obj)
+     localStorage.setItem('click',objStr)
+    
+    document.querySelector('#btn').innerHTML = obj.click
+      
+    }
+
+   
+   let fetch =  localStorage.getItem('click')
+   obj = fetch !== null ? JSON.parse(fetch) : { click : 0 }
+   document.querySelector('#btn').innerHTML = obj.click === 0 ? 'button' : obj.click ;
+   isOdd()
+  
+   function restart() {
+    localStorage.removeItem('click')
+    obj.click = 0;
+    document.querySelector('#btn').innerHTML = obj.click;
+    document.getElementById('btn').style.backgroundColor = 'white';
+   }
+  
+   function isOdd(){
+    if(obj.click == 0){
+       document.getElementById('btn').style.backgroundColor = 'white';
+    }
+    else if(obj.click % 2 == 1) {
+      document.getElementById('btn').style.backgroundColor = 'yellow';
+    }
+    else{
+      document.getElementById('btn').style.backgroundColor = 'red';
+    }
+   }
+
+  </script>
+</body>
+</html>
