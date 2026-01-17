@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+
+   let arr = [5,6]
+   arr.unshift(4)
+   console.log(arr)          //1
+   arr.push(7)
+   console.log(arr)
+
+  
+   let x = [1,3,4,5,67,8]
+   let y = []
+                                     //3
+   y.push(x.slice(0,3))
+   console.log(y)
+
+
+  function find(arr){
+    return arr[arr.length - 1]
+                                     //2
+  }
+console.log(find(x))
+console.log(find(arr))
+
+let prime = 0;
+num = 0;
+while(num < 5)
+     {
+       prime++
+       if(prime % 2 == 0){
+        continue ;
+       }                             //4
+       console.log(prime);
+       num ++ ;
+
+     }
+let p = 0;
+let n = 0;
+    while(p < 100){
+      p ++
+      
+      if(p % 2 == 1)
+      {console.log(p)
+        n++                       //5
+      }
+      if(n == 10){
+        break ;
+      }
+       
+    }
+
+     for(let i = 10;i >= 1;i--){
+      console.log(i)                    //6
+     }
+
+    let arr2 = [1,-6,5,7,-98]
+    for(let i = 0;i < arr2.length;i++)
+    {
+      if(arr2[i] < 0){
+        continue;                           //7
+      }
+      
+        console.log('positives are ' + arr2[i])
+
+      
+    }
+
+
+    let words = ['KG','Coding','Javascript','Course','is','Best']
+    let sentence = '';
+    for(let i = 0;i < words.length;i++){
+      sentence += words[i]                                   // 8
+
+    }
+    console.log(sentence)
+
+
+    // 5 AND 6 
+    
+    function isPrime(number){
+     
+      for(let i = 2; i < number ; i++){
+        
+        if(number % i === 0)
+         return false
+      }
+     
+      return true ;
+      
+    }
+
+    let we = 2;
+    let us = 0;
+    while(true){
+       if(isPrime(we)) {
+        console.log(we)
+        us++
+       }
+       we ++
+    if (us >= 5){break}
+    }
+    console.log(isPrime(24))
+    console.log(isPrime(11))
+    console.log(isPrime(19))
+    console.log(isPrime(22))
+    
+  </script>
+</body>
+</html>
