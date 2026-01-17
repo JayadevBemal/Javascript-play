@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+           //  WHILE LOOP
+  let number = 0;
+  while (number <= 10) {
+    console.log(number)
+    number++
+ }
+     
+  let x = 0 ;
+  while(x < 1){
+     console.log(x)
+     x = Math.random() * 2 ;
+  }
+  console.log(x)
+
+
+        //   do while  loop (the first iteration is unconditional and others are executed if the condition is true only)
+
+ let int = 100;
+        do{
+          console.log(int)
+          int ++
+
+        }
+        while(int <= 110)
+
+        //  For Loop
+
+        for(let y = 210;y>=200;y--)
+        {
+          console.log('the number is '+ y)
+        }
+
+  let nums = [28,49,29,45,22,10]
+  for(let i = 0; i < nums.length; i++ )
+   {
+    console.log(nums[i])       //nums.length is diff 
+   }
+
+         // accumulation
+
+       
+    let sum = 0;
+    for(let i = 0; i < nums.length;i++)
+   {
+    sum = sum + nums[i]
+   }
+   console.log(sum)
+
+   let sensex = [1,3,4,5]
+   let squares = [];
+   for(let i = 0; i < sensex.length;i++)
+  {    squares[i] = sensex[i] * sensex[i]   //squares.push(sensex[i]*sensex[i])
+   }
+   
+   console.log(squares)
+
+
+
+       // break and continue
+      
+
+       let arr = [2,3,4,5,6,7,8,9]
+       for(let i = 0;i < arr.length;i++)
+      {
+        if(arr[i]===6){
+          console.log(`number found at index ${i} `)
+          break;
+        }
+        console.log('loops')
+      }
+
+      for(let i = 0;i <= 25;i++)
+      {
+        if(i % 2 == 0){
+        continue;}             //skips that iteration and return to the for loop
+        console.log(i)
+      }
+  </script>
+</body>
+</html>
