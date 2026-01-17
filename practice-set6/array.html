@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    let num = [1,2,3,4,5];
+    console.log(num[4]);
+    console.log(num)
+    let sir = ['manoj',null,33]
+    console.log(sir)
+    // console.log(sir[0])
+    // console.log(sir[1])
+    // console.log(sir[2])
+    console.log(typeof sir)
+    console.log(Array.isArray(num))
+    console.log(Array.isArray(sir))
+
+    //.length shows the length of array
+
+    let arr = [1,2,3]
+    console.log(arr)
+
+    arr.push('new')
+    console.log(arr)
+
+    let popped = arr.pop();
+    console.log('popped  '+ popped +   arr)
+
+    arr.unshift(0)
+    console.log(arr)
+
+      //  splice
+     
+      arr.splice(0,2)
+      console.log(arr)
+
+      arr.unshift(0,1)
+      console.log(arr)
+       
+     //toString
+
+      console.log(arr.toString())
+
+    //sort
+    
+      arr.sort()
+      console.log(arr)
+
+    //valueOf
+
+    console.log(arr.valueOf())
+       
+    // reference type
+    let arr2 = arr;
+    arr3 = [0,1,2,3]
+    arr2[4] = 4;
+    console.log(arr)
+     
+    //destructuring
+     let [a,b,c,d] = arr
+     console.log(a, b , c ,d)
+     
+  </script>
+</body>
+</html>
