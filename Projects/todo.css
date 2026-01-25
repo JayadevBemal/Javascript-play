@@ -1,0 +1,12 @@
+ 
+ *{margin: 0;padding: 0;}
+ body{text-align: center;background-color: black;color: white;}
+  #input{margin: 15px auto;max-width: 95vw;}
+  .btn{background-color: rgb(91, 6, 166);border: none;cursor: pointer; border-radius:10px ;height: 50px;width: 25vw;color: white;}
+  .btn2 {background-color: red;color: white;} 
+  #display{display: grid;grid-template-columns: 30vw 30vw 25vw;gap: 10px;justify-content: center;}
+
+  .inputItem{height:40px ;
+            width:30vw ;}
+
+            span{text-align: left;}
