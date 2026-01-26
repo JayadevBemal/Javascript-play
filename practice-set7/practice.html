@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Document</title>
+  <style>
+  #btn{height: 40px;width: 50px;}
+  body{text-align: center;}
+  </style>
+</head>
+<body>
+  
+<button id="btn">scale</button>
+  <script>
+
+//1 assigning function to a variable
+
+     let multiply = function(num1,num2){return num1*num2}
+
+    console.log(multiply(3,3))
+
+//2  function taking a function as parameter
+
+     let one = function(a){return a*a}
+     let runTwice = function(a,one){
+      let first = one(a);
+      return one(first)
+
+     }
+     console.log(runTwice(10,one))
+
+ //3   button event using eventlistner
+
+     let button = document.getElementById('btn');
+    // setTimeout(() => {
+      
+    //   button.addEventListener('click',event => button.style.transform = "scale(4)");
+    // }, 0);
+
+    //  setTimeout(() => {
+    //   button.addEventListener('click',event => button.style.transform = "scale(1)")
+    //  }, 6000);
+
+    //  setInterval(() =>    
+    // button.style.transform = "scale(4)",3000);
+    // setInterval(() => button.style.transform = "scale(1)",6000)
+
+    let scaled = false;
+    setInterval(() => {
+      button.style.transform = scaled == false ? "scale(4)" : "scale(1)";
+      scaled = !scaled ;
+    },3000)
+
+  
+     button.style.transition = "all 2s "
+
+    
+//4 also solved -- onclick replacement
+
+//5 function that sums all array elements using foreach loop
+     
+
+   let sarray = [2,3,4,10,6,7]
+   let ssum = 0;
+   sarray.forEach((a,b) => {
+     ssum += a;
+   })
+   console.log(ssum)
+  
+
+//6 use of map function to find the arrays of elements
+
+   qarray = [2,3,5,6,7]
+   let square = (arr) => {
+   return arr.map((a) => a*a )
+   }
+   let and = [5,10]
+console.log(square(and))
+
+
+
+
+  </script>
+</body>
+</html>
