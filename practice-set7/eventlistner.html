@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Document</title>
+</head>
+<body>
+  <button id="a"><h1>color</h1></button>
+  <button id="b"><h1>boom</h1></button>
+  <button id="c"><h1>change</h1></button>
+
+  
+
+
+
+
+  <script>
+
+   let btn1 = document.querySelector('#a');
+   btn1.addEventListener('click',event => alert('button clicked'))
+
+   let btn2 = document.querySelector('#b');
+   btn2.addEventListener('click',event => document.querySelector('body').style.backgroundColor = 'green')
+
+   let btn3 = document.querySelector('#c')
+   btn3.addEventListener('click',event => document.getElementById('b').style.backgroundColor = 'red')
+    
+   //to remove any eventlistner activity we need to store the activity function in a separate variable for references.We us removEventListner('type',activity function) to remove the effect later if necessary.
+
+   
+
+  </script>
+</body>
+</html>
